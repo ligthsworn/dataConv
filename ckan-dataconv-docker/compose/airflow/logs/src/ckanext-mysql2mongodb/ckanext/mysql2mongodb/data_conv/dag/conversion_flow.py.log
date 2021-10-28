@@ -1,0 +1,42 @@
+[2021-10-19 04:14:36,766] {scheduler_job.py:182} INFO - Started process (PID=8013) to work on /srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py
+[2021-10-19 04:14:36,766] {scheduler_job.py:629} INFO - Processing file /srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py for tasks to queue
+[2021-10-19 04:14:36,768] {logging_mixin.py:104} INFO - [2021-10-19 04:14:36,768] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py
+[2021-10-19 04:14:37,002] {logging_mixin.py:104} INFO - [2021-10-19 04:14:37,000] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/Grammar.txt
+[2021-10-19 04:14:37,018] {logging_mixin.py:104} INFO - [2021-10-19 04:14:37,018] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/PatternGrammar.txt
+[2021-10-19 04:14:37,802] {logging_mixin.py:104} INFO - [2021-10-19 04:14:37,801] {dagbag.py:308} ERROR - Failed to import: /srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py", line 17, in <module>
+    from ckanext.mysql2mongodb.data_conv.converter.converter_factory import ConverterFactory
+  File "/srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/converter/converter_factory.py", line 20, in <module>
+    from .custom.image.image_data import ImageDataImportConversion
+  File "/srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/converter/custom/image/image_data.py", line 25
+    khôngImportConversion (AbstractDataConversion):
+                                                  ^
+SyntaxError: invalid syntax
+[2021-10-19 04:14:37,802] {scheduler_job.py:641} WARNING - No viable dags retrieved from /srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py
+[2021-10-19 04:14:37,812] {scheduler_job.py:190} INFO - Processing /srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py took 1.048 seconds
+[2021-10-19 04:17:49,178] {scheduler_job.py:182} INFO - Started process (PID=8254) to work on /srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py
+[2021-10-19 04:17:49,179] {scheduler_job.py:629} INFO - Processing file /srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py for tasks to queue
+[2021-10-19 04:17:49,179] {logging_mixin.py:104} INFO - [2021-10-19 04:17:49,179] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py
+[2021-10-19 04:17:49,376] {logging_mixin.py:104} INFO - [2021-10-19 04:17:49,376] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/Grammar.txt
+[2021-10-19 04:17:49,397] {logging_mixin.py:104} INFO - [2021-10-19 04:17:49,397] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/PatternGrammar.txt
+[2021-10-19 04:17:50,057] {logging_mixin.py:104} INFO - [2021-10-19 04:17:50,056] {dagbag.py:308} ERROR - Failed to import: /srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py", line 17, in <module>
+    from ckanext.mysql2mongodb.data_conv.converter.converter_factory import ConverterFactory
+  File "/srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/converter/converter_factory.py", line 20, in <module>
+    from .custom.image.image_data import ImageDataImportConversion
+  File "/srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/converter/custom/image/image_data.py", line 25
+    khôngImportConversion (AbstractDataConversion):
+                                                  ^
+SyntaxError: invalid syntax
+[2021-10-19 04:17:50,057] {scheduler_job.py:641} WARNING - No viable dags retrieved from /srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py
+[2021-10-19 04:17:50,069] {scheduler_job.py:190} INFO - Processing /srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py took 0.893 seconds

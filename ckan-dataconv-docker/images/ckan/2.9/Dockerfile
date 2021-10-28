@@ -232,12 +232,15 @@ RUN apt-get install -y --no-install-recommends \
         sqlite3 \
         vim \
         mongo-tools\
-        unixodbc
+        unixodbc \
+        redis-server
 
 RUN mkdir -p /srv/app/airflow
 RUN chmod 777 -R /srv/app/airflow
 ENV AIRFLOW_HOME=/srv/app/airflow
 RUN pip install apache-airflow
+RUN pip install paramiko csvkit
+RUN pip install --upgrade https://github.com/pajachiet/pymongo-schema/archive/master.zip
 
 EXPOSE 5000
 

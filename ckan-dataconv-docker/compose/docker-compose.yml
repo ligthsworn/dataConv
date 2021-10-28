@@ -1,3 +1,4 @@
+version: "3"
 
 volumes:
   ckan_data:
@@ -6,7 +7,7 @@ volumes:
   mysql_data:
   datastore_data:
   postgres-db-volume:
-
+  mongodb_data:
 
 services:
 
@@ -24,18 +25,19 @@ services:
       - mysql
       - datastore
       - postgres_airflow
+      - redis_conv
     ports:
       - "0.0.0.0:${CKAN_PORT}:5000"
       - "0.0.0.0:8080:8080"
     environment:
-      - CKAN_SQLALCHEMY_URL=postgresql://ckan:${POSTGRES_PASSWORD}@db/ckan
+      - CKAN_SQLALCHEMY_URL=postgresql://ckan:password@db/ckan
       - CKAN_DATASTORE_WRITE_URL=postgresql://ckan:${POSTGRES_PASSWORD}@db/datastore
       - CKAN_DATASTORE_READ_URL=postgresql://datastore_ro:${DATASTORE_READONLY_PASSWORD}@db/datastore
       - CKAN_SOLR_URL=http://solr:8983/solr/ckan
       - CKAN_REDIS_URL=redis://redis:6379/1
       - CKAN_SITE_URL=${CKAN_SITE_URL}
       - CKAN_MAX_UPLOAD_SIZE_MB=${CKAN_MAX_UPLOAD_SIZE_MB}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_PASSWORD=password
       - DS_RO_PASS=${DATASTORE_READONLY_PASSWORD}
     volumes:
       - ckan_data:/srv/app/data
@@ -45,7 +47,7 @@ services:
       - ./dags/:/srv/app/airflow/dags/
       - ./dagbags/:/srv/app/dagbags/
       - ./production.ini:/srv/app/production.ini
-      - ./ckanext-mysql2mongodb:/srv/app/src/ckanext-mysql2mongodb
+      - ./ckanext-mysql2mongodb:/srv/app/src/ckanext-mysql2mongodb/
     links:
       - "mysql:mysql"
     entrypoint:
@@ -53,6 +55,8 @@ services:
       # - /usr/bin/supervisord
       - /srv/app/all.sh
       # - /airflow-entrypoint.sh
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
 
   datapusher:
@@ -79,16 +83,16 @@ services:
       dockerfile: postgresql/Dockerfile
       args:
         - DS_RO_PASS=${DATASTORE_READONLY_PASSWORD}
-        - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+        - POSTGRES_PASSWORD=password
     networks:
       - backend
     environment:
       - DS_RO_PASS=${DATASTORE_READONLY_PASSWORD}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_PASSWORD=password
     volumes:
       - pg_data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5432"
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "ckan"]
 
@@ -98,7 +102,7 @@ services:
       context: .
       dockerfile: solr/Dockerfile
       args:
-        - CKAN_VERSION=2.9.1  
+        - CKAN_VERSION=2.9.1  home
     networks:
       - backend
     volumes:
@@ -112,6 +116,7 @@ services:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_USER=admin
       - MYSQL_PASSWORD=password
+    command: --performance-schema --secure-file-priv="" --local-infile=ON
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
@@ -128,6 +133,17 @@ services:
     networks:
       - backend
 
+  mongodb:
+    container_name: mongodb
+    image: mongo:4.4
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - mongodb_data:/data/mongodb
+    networks:
+      - backend    
+
   postgres_airflow:
     image: postgres:13
     environment:
@@ -141,65 +157,24 @@ services:
       interval: 5s
       retries: 5
     ports:
-      - "5434:5432"
+      - "5432"
     networks:
       - backend
     restart: always
 
-  redis_tttt:
-    image: redis:latest
-    ports:
-      - 6379:6379
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 5s
-      timeout: 30s
-      retries: 50
-    restart: always
-
-  # airflow-webserver:
-  #   <<: *airflow-common
-  #   command: webserver
-  #   ports:
-  #     - 8080:8080
-  #   healthcheck:
-  #     test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
-  #     interval: 10s
-  #     timeout: 10s
-  #     retries: 5
-  #   restart: always
-
-  # airflow-scheduler:
-  #   <<: *airflow-common
-  #   command: scheduler
-  #   restart: always
-
-  # airflow-worker:
-  #   <<: *airflow-common
-  #   command: celery worker
-  #   restart: always
-
-  # airflow-init:
-  #   <<: *airflow-common
-  #   command: version
-  #   environment:
-  #     <<: *airflow-common-env
-  #     _AIRFLOW_DB_UPGRADE: 'true'
-  #     _AIRFLOW_WWW_USER_CREATE: 'true'
-  #     _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
-  #     _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
-
-  # flower:
-  #   <<: *airflow-common
-  #   command: celery flower
-  #   ports:
-  #     - 5555:5555
-  #   healthcheck:
-  #     test: ["CMD", "curl", "--fail", "http://localhost:5555/"]
-  #     interval: 10s
-  #     timeout: 10s
-  #     retries: 5
-  #   restart: always
+  redis_conv:
+    container_name: redis_conv
+    build:
+      context: .
+      dockerfile: redis/Dockerfile
+    # image: redis:6.0.7
+    networks:
+      - backend
+    volumes:
+    - ./scripts/redis_entry.sh/:/data/redis_entry.sh
+    entrypoint:
+      - /data/redis_entry.sh
+    restart: unless-stopped
 
   redis:
     container_name: redis

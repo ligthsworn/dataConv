@@ -1,0 +1,41 @@
+[2021-10-26 02:52:37,406] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: data_conversion.taskPrepare 2021-10-24T12:00:00+00:00 [queued]>
+[2021-10-26 02:52:37,437] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: data_conversion.taskPrepare 2021-10-24T12:00:00+00:00 [queued]>
+[2021-10-26 02:52:37,437] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-10-26 02:52:37,437] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-10-26 02:52:37,437] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-10-26 02:52:37,450] {taskinstance.py:1089} INFO - Executing <Task(PythonOperator): taskPrepare> on 2021-10-24T12:00:00+00:00
+[2021-10-26 02:52:37,455] {standard_task_runner.py:52} INFO - Started process 148 to run task
+[2021-10-26 02:52:37,465] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'data_conversion', 'taskPrepare', '2021-10-24T12:00:00+00:00', '--job-id', '2872', '--pool', 'default_pool', '--raw', '--subdir', '/srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py', '--cfg-path', '/tmp/tmpoeezvw1h', '--error-file', '/tmp/tmpnr2u0uzv']
+[2021-10-26 02:52:37,470] {standard_task_runner.py:77} INFO - Job 2872: Subtask taskPrepare
+[2021-10-26 02:52:37,534] {logging_mixin.py:104} INFO - Running <TaskInstance: data_conversion.taskPrepare 2021-10-24T12:00:00+00:00 [running]> on host 744da3c02f86
+[2021-10-26 02:52:37,604] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=data_conversion
+AIRFLOW_CTX_TASK_ID=taskPrepare
+AIRFLOW_CTX_EXECUTION_DATE=2021-10-24T12:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-10-24T12:00:00+00:00
+[2021-10-26 02:52:37,676] {conversion_flow.py:104} ERROR - Error occured in taskPrepare Task!
+[2021-10-26 02:52:37,677] {conversion_flow.py:105} ERROR - Command '['curl -H "X-CKAN-API-Key: 8bec34f1-9103-48eb-85e6-e03403b1f367" -o ./downloads/None/None None']' returned non-zero exit status 6.
+[2021-10-26 02:52:37,677] {taskinstance.py:1482} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/airflow/models/taskinstance.py", line 1138, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/usr/local/lib/python3.6/dist-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/usr/local/lib/python3.6/dist-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/usr/local/lib/python3.6/dist-packages/airflow/operators/python.py", line 117, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.6/dist-packages/airflow/operators/python.py", line 128, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py", line 106, in taskPrepare
+    raise exception
+  File "/srv/app/src/ckanext-mysql2mongodb/ckanext/mysql2mongodb/data_conv/dag/conversion_flow.py", line 86, in taskPrepare
+    f"curl -H \"X-CKAN-API-Key: {CKAN_API_KEY}\" -o ./downloads/{resource_id}/{file_name} {file_url}"], shell=True, check=True)
+  File "/usr/lib/python3.6/subprocess.py", line 438, in run
+    output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['curl -H "X-CKAN-API-Key: 8bec34f1-9103-48eb-85e6-e03403b1f367" -o ./downloads/None/None None']' returned non-zero exit status 6.
+[2021-10-26 02:52:37,680] {taskinstance.py:1532} INFO - Marking task as FAILED. dag_id=data_conversion, task_id=taskPrepare, execution_date=20211024T120000, start_date=20211026T025237, end_date=20211026T025237
+[2021-10-26 02:52:37,754] {local_task_job.py:146} INFO - Task exited with return code 1

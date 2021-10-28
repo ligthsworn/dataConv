@@ -1,0 +1,120 @@
+[2021-10-02 06:31:44,978] {scheduler_job.py:182} INFO - Started process (PID=55) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:31:44,978] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:31:44,979] {logging_mixin.py:104} INFO - [2021-10-02 06:31:44,979] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:31:45,077] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:31:45,080] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:31:45,089] {logging_mixin.py:104} INFO - [2021-10-02 06:31:45,089] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:31:45,108] {logging_mixin.py:104} INFO - [2021-10-02 06:31:45,108] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:31:45,115] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.140 seconds
+[2021-10-02 06:32:15,222] {scheduler_job.py:182} INFO - Started process (PID=219) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:32:15,222] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:32:15,222] {logging_mixin.py:104} INFO - [2021-10-02 06:32:15,222] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:32:15,255] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:32:15,258] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:32:15,269] {logging_mixin.py:104} INFO - [2021-10-02 06:32:15,269] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:32:15,277] {logging_mixin.py:104} INFO - [2021-10-02 06:32:15,277] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:32:15,281] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.061 seconds
+[2021-10-02 06:32:45,683] {scheduler_job.py:182} INFO - Started process (PID=298) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:32:45,683] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:32:45,683] {logging_mixin.py:104} INFO - [2021-10-02 06:32:45,683] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:32:45,716] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:32:45,719] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:32:45,729] {logging_mixin.py:104} INFO - [2021-10-02 06:32:45,729] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:32:45,737] {logging_mixin.py:104} INFO - [2021-10-02 06:32:45,736] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:32:45,741] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.060 seconds
+[2021-10-02 06:33:16,422] {scheduler_job.py:182} INFO - Started process (PID=373) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:33:16,422] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:33:16,423] {logging_mixin.py:104} INFO - [2021-10-02 06:33:16,423] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:33:16,467] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:33:16,470] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:33:16,483] {logging_mixin.py:104} INFO - [2021-10-02 06:33:16,483] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:33:16,492] {logging_mixin.py:104} INFO - [2021-10-02 06:33:16,492] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:33:16,497] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.078 seconds
+[2021-10-02 06:33:47,072] {scheduler_job.py:182} INFO - Started process (PID=452) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:33:47,073] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:33:47,073] {logging_mixin.py:104} INFO - [2021-10-02 06:33:47,073] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:33:47,103] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:33:47,105] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:33:47,115] {logging_mixin.py:104} INFO - [2021-10-02 06:33:47,115] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:33:47,123] {logging_mixin.py:104} INFO - [2021-10-02 06:33:47,123] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:33:47,127] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.057 seconds
+[2021-10-02 06:34:17,738] {scheduler_job.py:182} INFO - Started process (PID=533) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:34:17,738] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:34:17,739] {logging_mixin.py:104} INFO - [2021-10-02 06:34:17,739] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:34:17,770] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:34:17,773] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:34:17,783] {logging_mixin.py:104} INFO - [2021-10-02 06:34:17,783] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:34:17,791] {logging_mixin.py:104} INFO - [2021-10-02 06:34:17,791] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:34:17,795] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.059 seconds
+[2021-10-02 06:34:48,364] {scheduler_job.py:182} INFO - Started process (PID=610) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:34:48,364] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:34:48,365] {logging_mixin.py:104} INFO - [2021-10-02 06:34:48,365] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:34:48,394] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:34:48,397] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:34:48,407] {logging_mixin.py:104} INFO - [2021-10-02 06:34:48,407] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:34:48,414] {logging_mixin.py:104} INFO - [2021-10-02 06:34:48,414] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:34:48,418] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.056 seconds
+[2021-10-02 06:35:18,943] {scheduler_job.py:182} INFO - Started process (PID=684) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:35:18,944] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:35:18,944] {logging_mixin.py:104} INFO - [2021-10-02 06:35:18,944] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:35:18,975] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:35:18,977] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:35:18,987] {logging_mixin.py:104} INFO - [2021-10-02 06:35:18,987] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:35:18,995] {logging_mixin.py:104} INFO - [2021-10-02 06:35:18,995] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:35:19,001] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.059 seconds
+[2021-10-02 06:35:56,802] {scheduler_job.py:182} INFO - Started process (PID=52) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:35:56,802] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:35:56,802] {logging_mixin.py:104} INFO - [2021-10-02 06:35:56,802] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:35:56,833] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:35:56,836] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:35:56,847] {logging_mixin.py:104} INFO - [2021-10-02 06:35:56,847] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:35:56,855] {logging_mixin.py:104} INFO - [2021-10-02 06:35:56,855] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:35:56,860] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.060 seconds
+[2021-10-02 06:36:45,749] {scheduler_job.py:182} INFO - Started process (PID=96) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:36:45,750] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:36:45,750] {logging_mixin.py:104} INFO - [2021-10-02 06:36:45,750] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:36:45,784] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:36:45,787] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:36:45,798] {logging_mixin.py:104} INFO - [2021-10-02 06:36:45,798] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:36:45,808] {logging_mixin.py:104} INFO - [2021-10-02 06:36:45,808] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:36:45,813] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.066 seconds
+[2021-10-02 06:37:16,818] {scheduler_job.py:182} INFO - Started process (PID=218) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:37:16,819] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:37:16,819] {logging_mixin.py:104} INFO - [2021-10-02 06:37:16,819] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:37:16,853] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:37:16,856] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:37:16,868] {logging_mixin.py:104} INFO - [2021-10-02 06:37:16,868] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:37:16,879] {logging_mixin.py:104} INFO - [2021-10-02 06:37:16,879] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:37:16,884] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.067 seconds
+[2021-10-02 06:37:42,070] {scheduler_job.py:182} INFO - Started process (PID=66) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:37:42,070] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:37:42,071] {logging_mixin.py:104} INFO - [2021-10-02 06:37:42,071] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:37:42,116] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:37:42,120] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:37:42,134] {logging_mixin.py:104} INFO - [2021-10-02 06:37:42,134] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:37:42,146] {logging_mixin.py:104} INFO - [2021-10-02 06:37:42,146] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:37:42,152] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.085 seconds
+[2021-10-02 06:38:12,237] {scheduler_job.py:182} INFO - Started process (PID=196) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:38:12,238] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:38:12,238] {logging_mixin.py:104} INFO - [2021-10-02 06:38:12,238] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:38:12,275] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:38:12,279] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:38:12,290] {logging_mixin.py:104} INFO - [2021-10-02 06:38:12,290] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:38:12,298] {logging_mixin.py:104} INFO - [2021-10-02 06:38:12,298] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:38:12,302] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.066 seconds
+[2021-10-02 06:38:42,853] {scheduler_job.py:182} INFO - Started process (PID=277) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:38:42,853] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:38:42,854] {logging_mixin.py:104} INFO - [2021-10-02 06:38:42,854] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:38:42,885] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:38:42,887] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:38:42,898] {logging_mixin.py:104} INFO - [2021-10-02 06:38:42,898] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:38:42,905] {logging_mixin.py:104} INFO - [2021-10-02 06:38:42,905] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:38:42,909] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.058 seconds
+[2021-10-02 06:39:13,566] {scheduler_job.py:182} INFO - Started process (PID=355) to work on /srv/app/airflow/dags/hello.py
+[2021-10-02 06:39:13,567] {scheduler_job.py:629} INFO - Processing file /srv/app/airflow/dags/hello.py for tasks to queue
+[2021-10-02 06:39:13,567] {logging_mixin.py:104} INFO - [2021-10-02 06:39:13,567] {dagbag.py:451} INFO - Filling up the DagBag from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:39:13,605] {logging_mixin.py:104} WARNING - /usr/local/lib/python3.6/dist-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2021-10-02 06:39:13,608] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_airflow1']) retrieved from /srv/app/airflow/dags/hello.py
+[2021-10-02 06:39:13,620] {logging_mixin.py:104} INFO - [2021-10-02 06:39:13,620] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-10-02 06:39:13,630] {logging_mixin.py:104} INFO - [2021-10-02 06:39:13,629] {dag.py:2280} INFO - Setting next_dagrun for hello_airflow1 to 2021-10-01 00:00:00+00:00
+[2021-10-02 06:39:13,634] {scheduler_job.py:190} INFO - Processing /srv/app/airflow/dags/hello.py took 0.070 seconds
